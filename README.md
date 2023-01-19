@@ -1,0 +1,1 @@
+# aygo-self-module
