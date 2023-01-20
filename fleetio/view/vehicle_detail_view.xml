@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vechile_detail_tree_view" model="ir.ui.view">
+        <field name="name">Vehicle Detail Tree View</field>
+        <field name="model">vehicle.detail</field>
+        <field name="arch" type="xml">
+            <tree string="Tree View">
+                <field name="vehicle"/>
+                <field name="licence_plate" optional="show"/>
+                <field name="fleet_cost"/>
+                <field name="transportation" optional="show"/>
+                
+            </tree>
+        </field>
+    </record>
+    <record id="vechile_detail_action" model="ir.actions.act_window">
+        <field name="name">vehicle</field>
+        <field name="res_model">vehicle.detail</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a vehicle detail
+            </p>
+        </field>
+    </record>
+
+</odoo>
