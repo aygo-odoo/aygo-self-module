@@ -1,19 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="vechile_detail_tree_view" model="ir.ui.view">
+    <record id="vehicle_detail_tree_view" model="ir.ui.view">
         <field name="name">Vehicle Detail Tree View</field>
         <field name="model">vehicle.detail</field>
         <field name="arch" type="xml">
             <tree string="Tree View">
                 <field name="vehicle"/>
                 <field name="licence_plate" optional="show"/>
-                <field name="fleet_cost"/>
-                <field name="transportation" optional="show"/>
-                
+                <field name="vehicle_type" optional="show"/>
+                <field name="location"/>
+                <field name="driver_name" optional="hide" />
             </tree>
         </field>
     </record>
+    <record id="vehicle_detail_form_view" model="ir.ui.view">
+        <field name="name">Vehicle Detail form View</field>
+        <field name="model">vehicle.detail</field>
+        <field name="arch" type="xml">
+            <form string="Form View">
+                <sheet>
+                    <div class ="title">
+                        <h1>
+                            <field name="vehicle" placeholder="Model Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="licence_plate"/>  
+                        <field name="vehicle_type"/>  
+                        <field name="location"/>
+                    </group>
+                    <group>
+                        <group string="Driver">
+                            <field name="driver_name"/>
+                            <field name="avaliable"/>
+                          
+                        </group>
+                        <group string ="Vehicle">
+                            <field name="category"/>
+                            <field name="fleet_manager"/>
+                        
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Model">
+                            <group>
+                            <group string="Model">
+                               <field name = 'model_year'/>
+                               <field name = 'transmission'/>
+                               <field name = 'colour'/>
+                                
+                            </group>
+                            <group string="Engine">
+                                <field name = 'horsepower'/>
+                                <field name = 'fuel_type'/>
+                             </group>
+                            </group>
+                        </page>
+                       
+                        <page string="Description">
+                            <field name="description" nolabel="1" placeholder="Write here any other information related to this vehicle" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="vechile_detail_action" model="ir.actions.act_window">
         <field name="name">vehicle</field>
         <field name="res_model">vehicle.detail</field>
