@@ -10,4 +10,34 @@
             </p>
         </field>
     </record>
+    <record id="vehicle_service_form_view" model="ir.ui.view">
+        <field name="name">Vehicle service form View</field>
+        <field name="model">vehicle.service</field>
+        <field name="arch" type="xml">
+            <form string="Form View">
+                <sheet>
+                    <div class ="title">
+                        <h1>
+                            <field name="service_type" placeholder="Model Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="description"/>
+                            <field name="date"/>
+                            <field name="cost"/>
+                            <field name="vendor"/>
+                        </group>
+                        <group>
+                            <field name="vehicle"/>
+                            <field name="driver"/>
+                            <field name="odometer_value"/>
+                        </group>
+                    </group>
+                        <group string="notes"/>
+                            <field name="notes" nolabel="1" placeholder="Write here any other information related to this vehicle" />
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>
