@@ -15,6 +15,8 @@
         'security/ir.model.access.csv',
         'view/vehicle_detail_view.xml',
         'view/vehicle_service_view.xml',
+        'view/vehicle_contract_view.xml',
+        'view/vehicle_odometer_view.xml',
         'view/vehicle_menus.xml',
      ],
 }

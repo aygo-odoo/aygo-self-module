@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="vehicle_service_action" model="ir.actions.act_window">
-        <field name="name">vehicle</field>
-        <field name="res_model">vehicle.service</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-            Create a vehicle detail
-            </p>
-        </field>
-    </record>
     <record id="vehicle_service_form_view" model="ir.ui.view">
-        <field name="name">Vehicle service form View</field>
+        <field name="name">Vehicle Service Form View</field>
         <field name="model">vehicle.service</field>
         <field name="arch" type="xml">
             <form string="Form View">
@@ -38,6 +28,16 @@
                             <field name="notes" nolabel="1" placeholder="Write here any other information related to this vehicle" />
                 </sheet>
             </form>
+        </field>
+    </record>
+    <record id="vehicle_service_action" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">vehicle.service</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a vehicle detail
+            </p>
         </field>
     </record>
 </odoo>

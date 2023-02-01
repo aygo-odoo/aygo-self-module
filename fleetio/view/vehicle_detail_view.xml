@@ -68,7 +68,7 @@
     </record>
 
     <record id="vechile_detail_action" model="ir.actions.act_window">
-        <field name="name">vehicle</field>
+        <field name="name">Vehicle</field>
         <field name="res_model">vehicle.detail</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

@@ -1,3 +1,5 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_vehicle_detail,access_vehicle_detail,model_vehicle_detail,base.group_user,1,1,1,1
 access_vehicle_service,access_vehicle_service,model_vehicle_service,base.group_user,1,1,1,1
+access_vehicle_contract,access_vehicle_contract,model_vehicle_contract,base.group_user,1,1,1,1
+access_vehicle_odometer,access_vehicle_odometer,model_vehicle_odometer,base.group_user,1,1,1,1
