@@ -4,6 +4,8 @@ from odoo import models,fields,api
 class Vehicle_Detail(models.Model):
     _name = "vehicle.detail"
     _description = "fleet Model"
+    _rec_name="vehicle"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     vehicle = fields.Char(string = 'Vehicle Model',required=True)
     licence_plate = fields.Char(string = 'Licence Plate', required = True)

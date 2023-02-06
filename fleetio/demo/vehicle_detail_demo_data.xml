@@ -4,7 +4,6 @@
     <record id="vehicle_detail_mode" model="vehicle.detail">
         <field name="vehicle">Audi123</field>
         <field name="licence_plate">FGH4567</field>
-
         <field name="vehicle_type">four_wheeler</field>
 
     </record>
@@ -12,14 +11,12 @@
     <record id="vehicle_detail_mode1" model="vehicle.detail">
         <field name="vehicle">w123</field>
         <field name="licence_plate">FGH257</field>
-
         <field name="vehicle_type">two_wheeler</field>
 
     </record>
     <record id="vehicle_detail_mode2" model="vehicle.detail">
         <field name="vehicle">alto</field>
         <field name="licence_plate">FGH789</field>
-
         <field name="vehicle_type">four_wheeler</field>
 
     </record>

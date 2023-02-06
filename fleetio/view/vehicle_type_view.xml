@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="vechile_contract_action" model="ir.actions.act_window">
-        <field name="name">Contract</field>
-        <field name="res_model">vehicle.contract</field>
+    <record id="vechile_type_action" model="ir.actions.act_window">
+        <field name="name">Type</field>
+        <field name="res_model">vehicle.type</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-            Create a contract
+            Create a vehicle type
             </p>
         </field>
     </record>

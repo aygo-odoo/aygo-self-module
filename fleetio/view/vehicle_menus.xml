@@ -7,10 +7,11 @@
             <menuitem id="vehicle_second_level_menu3" action="vechile_contract_action" name="Contract"/> 
         </menuitem>
         <menuitem id="vehicle_first_level_menu1" name="Fleet">
-            <menuitem id="vehicle_second_level_menu4" action="vehicle_odometer_action" name="Odometer"/>
+            <menuitem id="vehicle_second_level_menu4" action="vehicle_charge_action" name="Charge"/>
         </menuitem>
-        <menuitem id="vehicle_first_level_menu2" name="Fleet">
-            <menuitem id="vehicle_second_level_menu5" action="vehicle_odometer_action" name="Odometer"/>
+        <menuitem id="vehicle_first_level_menu2" name="Configure">
+            <menuitem id="vehicle_second_level_menu6" action="vechile_type_action" name="Type"/>
+            <menuitem id="vehicle_second_level_menu7" action="vechile_tag_action" name="Tag"/>
         </menuitem>
     </menuitem>   
 </odoo>

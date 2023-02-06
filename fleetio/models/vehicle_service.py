@@ -4,6 +4,7 @@ from odoo import models,fields,api
 class Vehicle_Service(models.Model):
     _name = "vehicle.service"
     _description = "Fleet Service Model"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     service_type =fields.Char(string="Service Type")
     description = fields.Char(string="Description")
