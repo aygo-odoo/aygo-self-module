@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="vehicle_contract_form_view" model="ir.ui.view">
+        <field name="name">Vehicle Contract Form View</field>
+        <field name="model">vehicle.contract</field>
+        <field name="arch" type="xml">
+            <form string="Form View">
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="contract"/></h1>
+                        </div>
+                        <group col="2">
+                            <group string="Contract Information">
+                                <field name="user_id"/>
+                                <field name="cost_subtype_id" />
+                                <field name="insurer_id" />
+                                <field name="ins_ref"/>
+                                </group>
+                            <group string="Vehicle Information">
+                                <field name="vehicle_id" />
+                                <!-- <field name="purchaser_id" /> -->
+                            </group>
+                        </group>
+                        <group col="2">
+                            <group>
+                                <field name="amount" string="Activation Cost" help="Cost that is paid only once at the creation of the contract" widget="monetary" class="w-25"/>
+                                <label for="cost_generated"/>
+                                <div class="o_row">
+                                    <span class="w-25">
+                                        <field name="cost_generated" widget="monetary" />
+                                    </span>
+                                    <field name="cost_frequency" />
+                                </div>
+                            </group>
+                            <group>
+                                <field name="date" string="Invoice Date"/>
+                                <field name="start_date"/>
+                                <field name="expiration_date" />
+                            </group>
+                        </group>
+                        <separator string="Terms and Conditions"/>
+                        <field name="notes" nolabel="1" placeholder="Write here all other information relative to this contract"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+    </record>
     <record id="vechile_contract_action" model="ir.actions.act_window">
         <field name="name">Contract</field>
         <field name="res_model">vehicle.contract</field>

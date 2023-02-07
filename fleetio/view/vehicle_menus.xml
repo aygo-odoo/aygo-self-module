@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="vehicle_root_menu" name="Fleetio">
-        <menuitem id="vehicle_first_level_menu" name="Vehicle">
+    <menuitem id="vehicle_root_menu" web_icon="fleetio,static/description/fleetio.png" name="Fleetio">
+        <menuitem id="vehicle_first_level_menu"   name="Vehicle">
             <menuitem id="vehicle_second_level_menu" action="vechile_detail_action" name=" Vehicle"/>
             <menuitem id="vehicle_second_level_menu2" action="vehicle_service_action" name="Service"/>
             <menuitem id="vehicle_second_level_menu3" action="vechile_contract_action" name="Contract"/> 

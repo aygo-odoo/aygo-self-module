@@ -20,6 +20,7 @@
         <field name="arch" type="xml">
             <form string="Form View">
                 <sheet>
+                    <field name="image" widget="image" class="oe_avatar" />
                     <div class ="title">
                         <h1>
                             <field name="vehicle" placeholder="Model Name"/>

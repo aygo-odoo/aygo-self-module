@@ -5,7 +5,10 @@
         <field name="model">vehicle.service</field>
         <field name="arch" type="xml">
             <form string="Form View">
-                <sheet>
+                    <header>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
                     <div class ="title">
                         <h1>
                             <field name="service_type" placeholder="Model Name"/>
@@ -14,12 +17,13 @@
                     <group>
                         <group>
                             <field name="description"/>
+                            <field name="service_type_id"/>
                             <field name="date"/>
-                            <field name="cost"/>
-                            <field name="vendor"/>
+                            <field name="amount"/>
+                            <field name="vendor_id"/>
                         </group>
                         <group>
-                            <field name="vehicle"/>
+                            <field name="vehicle_id"/>
                             <field name="driver"/>
                             <field name="odometer_value"/>
                         </group>

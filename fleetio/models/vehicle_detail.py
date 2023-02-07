@@ -7,6 +7,8 @@ class Vehicle_Detail(models.Model):
     _rec_name="vehicle"
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
+
+    image = fields.Image("Logo", max_width=128, max_height=128)
     vehicle = fields.Char(string = 'Vehicle Model',required=True)
     licence_plate = fields.Char(string = 'Licence Plate', required = True)
     vehicle_type = fields.Selection(

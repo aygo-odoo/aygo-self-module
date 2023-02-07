@@ -22,4 +22,5 @@
         'view/vehicle_menus.xml',
      ],
      'depends' : ['mail'],
+     'icon' : "fleetio/static/description/fleetio.png"
 }
