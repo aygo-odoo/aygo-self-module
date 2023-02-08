@@ -17,6 +17,7 @@
         'view/vehicle_service_view.xml',
         'view/vehicle_contract_view.xml',
         'view/vehicle_charge_view.xml',
+        'view/vehicle_category_view.xml',
         'view/vehicle_tag_view.xml',
         'view/vehicle_type_view.xml',
         'view/vehicle_menus.xml',

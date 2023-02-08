@@ -9,8 +9,8 @@ class Vehicle_Service(models.Model):
 
     description = fields.Char('Description')
     service_type_id = fields.Many2one(
-        'vehicle.service', 'Service Type',
-        default=lambda self: self.env.ref('vehicle.service', raise_if_not_found=False),
+        'vehicle.type', 'Service Type',
+        default=lambda self: self.env.ref('vehicle.type', raise_if_not_found=False),
     )
     date = fields.Date(help='Date when the cost has been executed', default=fields.Date.context_today)
     amount = fields.Float('Cost')

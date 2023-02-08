@@ -10,7 +10,7 @@ class Vehicle_Contract(models.Model):
 
     contract = fields.Char()
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.user)
-    cost_subtype_id = fields.Many2one('fleet.service.type', 'Type', help='Cost type purchased with this cost', domain=[('category', '=', 'contract')])
+    cost_subtype_id = fields.Many2one('vehicle.type', 'Type', help='Cost type purchased with this cost', domain=[('category', '=', 'contract')])
     insurer_id = fields.Many2one('res.partner', 'Vendor')
     ins_ref = fields.Char('Reference', size=64, copy=False)
     vehicle_id = fields.Many2one('vehicle.detail', 'Vehicle', required=True)

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="vehicle_type_tree_view" model="ir.ui.view">
+        <field name="name">Vehicle Type Tree View</field>
+        <field name="model">vehicle.type</field>
+        <field name="arch" type="xml">
+            <tree string="Service Types" editable="bottom">
+                <field name="name" />
+                <field name="category" />
+            </tree>
+        </field>
+    </record>
     <record id="vechile_type_action" model="ir.actions.act_window">
         <field name="name">Type</field>
         <field name="res_model">vehicle.type</field>

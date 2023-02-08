@@ -38,7 +38,7 @@
                           
                         </group>
                         <group string ="Vehicle">
-                            <field name="category"/>
+                            <field name="category_id"/>
                             <field name="fleet_manager"/>
                         
                         </group>

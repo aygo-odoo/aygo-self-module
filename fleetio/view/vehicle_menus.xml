@@ -11,7 +11,8 @@
         </menuitem>
         <menuitem id="vehicle_first_level_menu2" name="Configure">
             <menuitem id="vehicle_second_level_menu6" action="vechile_type_action" name="Type"/>
-            <menuitem id="vehicle_second_level_menu7" action="vechile_tag_action" name="Tag"/>
+            <menuitem id="vehicle_second_level_menu7" action="vechile_category_action" name="Category"/>
+            <menuitem id="vehicle_second_level_menu8" action="vechile_tag_action" name="Tag"/>
         </menuitem>
     </menuitem>   
 </odoo>

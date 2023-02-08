@@ -21,7 +21,7 @@ class Vehicle_Detail(models.Model):
     avaliable = fields.Boolean(string = 'Avaliable')
     #vehicle
     fleet_manager = fields.Char(string = 'Fleet Manager')
-    category = fields.Char(string = 'Category')
+    category_id = fields.Many2one('vehicle.category', 'Category')
     #model
     model_year = fields.Integer(string = 'Model Year')
     colour = fields.Char(string = 'Colour')
