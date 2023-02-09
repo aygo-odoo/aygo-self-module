@@ -9,6 +9,7 @@ class Vehicle_Contract(models.Model):
     _rec_name="contract"
 
     contract = fields.Char()
+    # offer_id = fields.Many2one('vehicle.detail')
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.user)
     cost_subtype_id = fields.Many2one('vehicle.type', 'Type', help='Cost type purchased with this cost', domain=[('category', '=', 'contract')])
     insurer_id = fields.Many2one('res.partner', 'Vendor')
@@ -42,6 +43,7 @@ class Vehicle_Contract(models.Model):
         tracking=True,
         copy=False)
     notes = fields.Text()
+    
 
     def compute_next_year_date(self, strdate):
         oneyear = relativedelta(years=1)

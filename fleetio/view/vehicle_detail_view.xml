@@ -58,7 +58,9 @@
                              </group>
                             </group>
                         </page>
-                       
+                        <page string="Contract">
+                            <field name="contract_ids"/>
+                        </page>
                         <page string="Description">
                             <field name="description" nolabel="1" placeholder="Write here any other information related to this vehicle" />
                         </page>

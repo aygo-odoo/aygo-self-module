@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="vehicle_contract_tree_view" model="ir.ui.view">
+        <field name="name">Vehicle Contract Tree View</field>
+        <field name="model">vehicle.contract</field>
+        <field name="arch" type="xml">
+            <tree string="Tree View">
+                <field name="contract" optional="show" string="Contract"/>
+            </tree>
+        </field>
+    </record>
     <record id="vehicle_contract_form_view" model="ir.ui.view">
         <field name="name">Vehicle Contract Form View</field>
         <field name="model">vehicle.contract</field>

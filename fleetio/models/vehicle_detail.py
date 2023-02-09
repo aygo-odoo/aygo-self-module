@@ -37,6 +37,7 @@ class Vehicle_Detail(models.Model):
     )
     #description
     description = fields.Char(string ='Description')
+    contract_ids = fields.One2many('vehicle.contract','vehicle_id')
 
 
 

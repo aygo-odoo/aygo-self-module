@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-   
+    <record id="vehicle_tag_tree_view" model="ir.ui.view">
+        <field name="name">Vehicle Tag Tree View</field>
+        <field name="model">vehicle.tag</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicle Tags" editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+            </tree>
+        </field>
+    </record>
     <record id="vechile_tag_action" model="ir.actions.act_window">
         <field name="name">Tag</field>
         <field name="res_model">vehicle.tag</field>

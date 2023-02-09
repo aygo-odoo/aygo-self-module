@@ -5,7 +5,7 @@ class Vehicle_Service(models.Model):
     _name = "vehicle.service"
     _description = "Fleet Service Model"
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _rec_name="service_type"
+    _rec_name="service_type_id"
 
     description = fields.Char('Description')
     service_type_id = fields.Many2one(
@@ -20,7 +20,6 @@ class Vehicle_Service(models.Model):
     odometer_value = fields.Float(
         string='Odometer Value',
         help='Odometer measure of the vehicle at the moment of this log')
-    service_type=fields.Char(string='Service')
 
     # company_id = fields.Many2one('res.company', 'Company', default=lambda self: self.env.company)
     # currency_id = fields.Many2one('res.currency', related='company_id.currency_id')

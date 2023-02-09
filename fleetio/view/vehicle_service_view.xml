@@ -10,14 +10,13 @@
                     </header>
                     <sheet>
                     <div class ="title">
-                        <h1>
-                            <field name="service_type" placeholder="Model Name"/>
-                        </h1>
+                        <h2>
+                            <field name="service_type_id" placeholder="Model Name"/>
+                        </h2>
                     </div>
                     <group>
                         <group>
                             <field name="description"/>
-                            <field name="service_type_id"/>
                             <field name="date"/>
                             <field name="amount"/>
                             <field name="vendor_id"/>
