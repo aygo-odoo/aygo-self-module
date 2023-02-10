@@ -23,7 +23,7 @@ class Vehicle_Contract(models.Model):
         ('daily', 'Daily'),
         ('weekly', 'Weekly'),
         ('monthly', 'Monthly'),
-        ('yearly', 'Yearly')
+        ('yearly', 'Yearly'),
         ], 'Recurring Cost Frequency', default='monthly', required=True)
     date = fields.Date(help='Date when the cost has been executed')
     start_date = fields.Date(
