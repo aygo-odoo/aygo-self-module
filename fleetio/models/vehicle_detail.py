@@ -15,6 +15,17 @@ class Vehicle_Detail(models.Model):
         string = 'Vechicle Type',
         selection = [('two_wheeler','Two Wheeler'),('four_wheeler','Four Wheeler'),('heavy_vechiles','Heavy Vehicle')]
     )
+    state = fields.Selection(
+        string = 'State',
+        tracking=True,
+        default="new",
+        copy=False,
+        selection = [('new','New'),
+        ('contract_received','Contract Received'),
+        ('contract_accepted',('Contract Accepted')),
+        ('done','Done'),
+        ('canceled','Canceled')]
+    )
     location = fields.Char(string = 'Location')
     #driver
     driver_name = fields.Char(string = 'Driver Name')
@@ -38,8 +49,21 @@ class Vehicle_Detail(models.Model):
     #description
     description = fields.Char(string ='Description')
 
-    
+
     contract_ids = fields.One2many('vehicle.contract','vehicle_id')
 
 
-
+    #buttons for accepting and cancelation of contract
+    def action_done(self):
+        for record in self:
+            if record.state == 'canceled':
+                raise UserError("A canceled contract cannot be accepted")
+            else:
+                record.state = 'done'
+            
+    def action_cancle(self):
+        for record in self:
+            if record.state == 'done':
+                raise UserError("A accepted contract cannot be Canceled")
+        else:
+            record.state = 'canceled'

@@ -7,3 +7,5 @@ access_vehicle_charge,access_vehicle_charge,model_vehicle_charge,base.group_user
 access_vehicle_type,access_vehicle_type,model_vehicle_type,base.group_user,1,1,1,1
 access_vehicle_category,access_vehicle_category,model_vehicle_category,base.group_user,1,1,1,1
 access_vehicle_tag,access_vehicle_tag,model_vehicle_tag,base.group_user,1,1,1,1
+
+

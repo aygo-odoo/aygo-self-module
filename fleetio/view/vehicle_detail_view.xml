@@ -19,6 +19,11 @@
         <field name="model">vehicle.detail</field>
         <field name="arch" type="xml">
             <form string="Form View">
+                <header>
+                    <button name="action_done" type="object" string="Done" attrs ="{'invisible': [('state', 'in', ('done', 'canceled'))]}" />
+                    <button name="action_cancle" type="object" string="Cancle" attrs ="{'invisible': [('state', 'in', ('done', 'canceled'))]}"/>
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}" />
+                </header>
                 <sheet>
                     <field name="image" widget="image" class="oe_avatar" />
                     <div class ="title">
